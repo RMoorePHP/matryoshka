@@ -33,8 +33,8 @@ class BladeDirective
     /**
      * Handle the @cache setup.
      *
-     * @param mixed       $model
-     * @param string|null $key
+     * @param mixed             $model
+     * @param string|null|array $key
      */
     public function setUp($model, $key = null)
     {
@@ -58,8 +58,8 @@ class BladeDirective
     /**
      * Normalize the cache key.
      *
-     * @param mixed       $item
-     * @param string|null $key
+     * @param mixed             $item
+     * @param string|null|array $key
      */
     protected function normalizeKey($item, $key = null)
     {
@@ -67,6 +67,10 @@ class BladeDirective
         // key, we'll opt for that.
         if (is_string($item) || is_string($key)) {
             return is_string($item) ? $item : $key;
+        }
+
+        if($i = is_array($item) || is_array($key)) {
+            return implode('-', $i ? $item : $key);
         }
         
         // Otherwise we'll try to use the item to calculate
