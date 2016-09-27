@@ -1,5 +1,5 @@
 {
-    "name": "laracasts/matryoshka",
+    "name": "rmoore/matryoshka",
     "description": "Russian Doll Caching for Laravel.",
     "license": "MIT",
     "keywords": ["laravel", "cache"],
@@ -10,7 +10,7 @@
         }
     ],
     "require": {
-        "illuminate/support": "^5.2"
+        "illuminate/support": "^5.3"
     },
     "autoload": {
         "psr-4": {
@@ -22,7 +22,7 @@
     },
     "require-dev": {
         "phpunit/phpunit": "^5.2",
-        "illuminate/database": "^5.2",
-        "illuminate/cache": "^5.2"
+        "illuminate/database": "^5.3",
+        "illuminate/cache": "^5.3"
     }
 }
