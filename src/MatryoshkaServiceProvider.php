@@ -16,7 +16,7 @@ class MatryoshkaServiceProvider extends ServiceProvider
     public function boot(Kernel $kernel)
     {
         if ($this->app->isLocal()) {
-            $kernel->pushMiddleware('Laracasts\Matryoshka\FlushViews');
+            // $kernel->pushMiddleware('Laracasts\Matryoshka\FlushViews');
         }
 
         Blade::directive('cache', function ($expression) {
